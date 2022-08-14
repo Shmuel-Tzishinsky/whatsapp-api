@@ -1,0 +1,40 @@
+.loading-load-chat {
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+  position: relative;
+}
+
+.loading-load-chat div {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 1;
+  box-shadow: 3px 3px 9px -3px #333;
+}
+
+.loading-load-chat svg {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  animation: loading-load-chat 1s linear infinite;
+}
+
+@keyframes loading-load-chat {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,98 @@
+@use '../../styles/global/colors';
+@use '../../styles/core/sizes';
+
+.contacts__container {
+  min-height: 70px;
+  max-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 0.5px solid colors.$chat-header-background-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: colors.$contact-background-color;
+
+    .contacts__details .options {
+      display: inline;
+    }
+  }
+
+  .contacts__img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 5px;
+    fill: #d0cfcf;
+  }
+  .contacts__texts {
+    flex: 1;
+    margin-right: 5px;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-rendering: geometricPrecision;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .texts__name {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .texts__lastMessage {
+      font-size: sizes.$small-font-size;
+    color: #444343;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+
+    .last-message-cont{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      svg{
+        margin-right: 5px;
+      }
+    }
+    }
+  }
+  
+  .contacts__details {
+    text-align: end;
+
+    .details__time {
+      display: block;
+      font-size: sizes.$small-font-size;
+      color: colors.$contact-icons-color;
+      margin-bottom: 3px;
+    }
+    .details__icon {
+      vertical-align: middle;
+      color: colors.$contact-icons-color;
+      font-size: sizes.$extra-big-font-size;
+    }
+    .options {
+      display: none;
+    }
+    .details__unreadMessage {
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 3px;
+      background-color: colors.$message-notification-color;
+      color: colors.$font-secondary-color;
+      padding-top: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      min-width: 21px;
+      height: 21px;
+      text-align: center;
+    }
+  }
+}

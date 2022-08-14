@@ -1,0 +1,36 @@
+@use '../../../../styles/core/wrapper';
+@use '../../../../styles/core/sizes';
+@use '../../../../styles/global/colors';
+
+.sidebar__search {
+	@include wrapper.align-center;
+	justify-content: space-between;
+	height: 50px;
+	padding: sizes.$sidebar-container-size;
+	background-color: colors.$layout-quinary-color;
+	border-bottom: 1px solid  colors.$chat-header-background-color;
+
+	.search__area {
+		@include wrapper.align-center;
+		width: 90%;
+		height: calc(100% - 15px);
+		background-color: colors.$chat-header-background-color;
+		border-radius: 8px;
+		
+		.search__icon {
+			margin: 5px 10px;
+			color: colors.$sidebar-header-icons-color;
+			font-size: sizes.$extra-big-font-size;
+			cursor: pointer;
+		}
+		.search__field {
+			background-color: colors.$chat-header-background-color;
+			width: calc(100% - 60px);
+			height: calc(100% - 15px);
+			padding: 5px;
+			font-size: sizes.$small-font-size;
+			border: none;
+			outline: none;
+		}
+	}
+}

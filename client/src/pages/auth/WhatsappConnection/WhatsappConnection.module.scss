@@ -1,0 +1,106 @@
+.continer {
+  .br_top {
+    background-color: rgb(44, 183, 66);
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    .br_top_content {
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      .img_continer {
+        height: 100%;
+        width: 50vw;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        // background-color: rgb(44, 183, 66);
+        // background-image: linear-gradient(
+        //   to right,
+        //   rgb(44, 183, 66),
+        //   rgb(255, 255, 255)
+        // );
+        img {
+          height: 130px;
+          width: 130px;
+          object-fit: cover;
+          object-position: center;
+          margin-right: 50px;
+        }
+      }
+      .title_top {
+        color: white;
+        font-weight: 900;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+      }
+    }
+  }
+  .qr_box {
+    .title {
+      margin-top: 50px;
+    }
+    .qrCode_content {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .qrCode {
+        height: 264px;
+        width: 264px;
+        .spinner {
+          height: 264px;
+          width: 264px;
+          background-color: rgba(128, 128, 128, 0.863);
+          position: absolute;
+          top: 0px;
+     
+        }
+        .requestQrCode_box {
+          height: 264px;
+          width: 264px;
+          background-color: rgb(128, 128, 128);
+          position: absolute;
+          top: 0px;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .requestQrCode_button {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 150px;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover {
+              background-color: rgb(44, 183, 66);
+              color: white;
+            }
+          }
+        }
+      }
+      .qrCode_explanation {
+        margin-right: 100px;
+        .landing_title {
+          font-size: 28px;
+          font-weight: 300;
+          line-height: normal;
+          color: #41525d;
+          margin-bottom: 45px;
+          text-align: left;
+        }
+        .landing_text {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: normal;
+          margin-bottom: 15px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

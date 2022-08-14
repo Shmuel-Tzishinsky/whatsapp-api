@@ -1,0 +1,29 @@
+.chat {
+  display: flex;
+  height: 100vh;
+}
+
+.open_media{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.481);
+  z-index: 999;
+  cursor: pointer;
+
+  .media{
+    position: absolute;
+    top: 50%;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    max-height: 97vh;
+    z-index: 999;
+    max-width: 97vw;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+}
